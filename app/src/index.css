@@ -13,3 +13,100 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+p {
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+/*Global Sidebar */
+.content-bar {
+ padding: 0 1.5rem;
+}
+
+/*User Account Info Section */
+.user-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 1.3;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 1rem 0;
+}
+
+
+.user-info-container {
+  margin-left: .5rem;
+}
+.account-username {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: .3rem;
+}
+.account-location {
+  font-size: .8rem;
+}
+.image-container {
+  background-color: #fafafa;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.user-icon {
+  width: 50px;
+  object-fit: contain;
+}
+
+.image-caption {
+  display: flex;
+  margin: 10px 0;
+}
+
+/*Comment Section */
+.post-info-section {
+  max-height: 330px;
+  overflow-y: scroll;
+  margin: 0px 0 5px 0;
+}
+.user-comment-block {
+  margin-bottom: .3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.user-comment {
+  width: 80%;
+}
+.comment-username {
+  font-weight: 600;
+  margin-right: 5px;
+}
+.comment-like-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.comment-like-icon > svg {
+  width: 15px;
+}
+
+/*User Like Section */
+.like-section {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+.like-icon {
+  display: inline-block;
+  cursor: pointer;
+  margin: auto 0;
+}
+.like-counter {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.date-posted {
+  color: grey;
+  font-size: .8rem;
+  text-transform: uppercase;
+}

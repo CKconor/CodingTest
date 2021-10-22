@@ -1,22 +1,26 @@
-import React from 'react'
-import Image from './children/image'
-import LikeButton from './children/like_button'
-import styles from './styles'
+import React from "react";
+import Image from "./children/image";
+import LikeSection from "./children/like_button";
+import styles from "./styles";
+import UserBlock from "./children/UserBlock/index";
+import CommentBlock from "./children/comment_block/index";
 
 const App = (props) => {
-  const { data } = props
+  const { data } = props;
   return (
     <main style={styles.main}>
-      <div style={styles.image}>
+      <div className="image-container" style={styles.image}>
         <Image data={data} />
       </div>
       <div style={styles.text}>
-        <p>User block</p>
-        <p>Comments block</p>
-        <LikeButton />
+        <div className="content-bar">
+          <UserBlock data={data} style={styles.UserBlock} />
+          <CommentBlock data={data} />
+          <LikeSection data={data} />
+        </div>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default App
+export default App;
