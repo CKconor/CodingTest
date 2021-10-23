@@ -19,12 +19,6 @@ const LikeButton = (props) => {
   const postDate = new Date(unixTime * 1000)
 
   const today = new Date()
-  const date =
-      today.getFullYear() +
-      '-' +
-      (today.getMonth() + 1) +
-      '-' +
-      today.getDate()
 
   const diffDays = (date, otherDate) =>
     Math.ceil(Math.abs(date - otherDate) / (1000 * 60 * 60 * 24))
