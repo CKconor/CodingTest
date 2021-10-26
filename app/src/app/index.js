@@ -9,11 +9,11 @@ const App = (props) => {
   const { data } = props
   return (
     <main style={styles.main}>
-      <div className='image-container' style={styles.image}>
+      <div style={styles.image}>
         <Image data={data} />
       </div>
       <div style={styles.text}>
-        <div className='content-bar'>
+        <div style={styles.sidebar}>
           <UserBlock data={data} style={styles.UserBlock} />
           <CommentBlock data={data} />
           <LikeSection data={data} />

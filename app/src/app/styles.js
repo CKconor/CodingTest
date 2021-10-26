@@ -21,9 +21,9 @@ const Default =
      order: '1',
      flex: '1 0 60%',
      alignSelf: 'flex-start',
-     padding: '3rem 0'
+     padding: '3rem 0',
+     backgroundColor: '#fafafa'
    },
-
    text: {
      order: '2',
      flex: '1 0 40%',
@@ -32,6 +32,9 @@ const Default =
    UserBlock: {
      display: 'flex',
      flexDirection: 'row'
+   },
+   sidebar: {
+    padding: '0 1.5rem'
    }
  }
 export default Default

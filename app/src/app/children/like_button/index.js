@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import LikedIcon from './children/liked_icon'
 import UnLikedIcon from './children/unliked_icon'
+import styles from './styles.js'
 
 const LikeButton = (props) => {
   const { data } = props
@@ -24,15 +25,15 @@ const LikeButton = (props) => {
     Math.ceil(Math.abs(date - otherDate) / (1000 * 60 * 60 * 24))
 
   return (
-    <div className='like-section'>
-      <div className='like-info-container'>
-        <p className='like-counter'>{likeValue} Likes</p>
-        <p className='date-posted'>{diffDays(postDate, today)} days ago </p>
+    <div style={styles.block}>
+      <div>
+        <p style={styles.counter}>{likeValue} Likes</p>
+        <p style={styles.posted}>{diffDays(postDate, today)} days ago </p>
       </div>
       {like
         ? (
           <div
-            className='like-icon'
+            style={styles.icon}
             onClick={() => {
               setLikeStatus()
               decreaseLikeValue()
@@ -43,7 +44,7 @@ const LikeButton = (props) => {
           )
         : (
           <div
-            className='like-icon'
+            style={styles.icon}
             onClick={() => {
               setLikeStatus()
               increaseLikeValue()
