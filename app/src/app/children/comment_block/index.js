@@ -5,7 +5,7 @@ import styles from './styles'
 
 const CommentBlock = (props) => {
   const { data } = props
-  const commentArray = Array.from(data.edge_media_to_comment.edges)
+  const commentArray = Array.from(data.comments)
   return (
     <div style={styles.posts}>
       <div style={styles.caption}>
@@ -17,8 +17,8 @@ const CommentBlock = (props) => {
 
       <div>
         {commentArray.map((comments) => (
-          <div key={comments.node.id}>
-            <CommentItem comments={comments} />
+          <div key={comments.id}>
+            <CommentItem comments={comments} data={data} />
           </div>
         ))}
       </div>
