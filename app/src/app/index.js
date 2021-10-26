@@ -2,7 +2,7 @@ import React from 'react'
 import Image from './children/image'
 import LikeSection from './children/like_button'
 import styles from './styles'
-import UserBlock from './children/UserBlock/index'
+import UserBlock from './children/user_block/index'
 import CommentBlock from './children/comment_block/index'
 
 const App = (props) => {
