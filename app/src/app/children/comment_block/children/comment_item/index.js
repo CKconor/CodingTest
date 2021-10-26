@@ -12,25 +12,19 @@ const CommentItem = ({ comments }) => {
         <span className='comment-username'>{comments.node.owner.username}</span>
         {comments.node.text}
       </p>
+      <div
+            className='comment-like-icon' onClick={() => {
+              setLikeStatus()
+            }}
+          >
       {like
         ? (
-          <div
-            className='comment-like-icon' onClick={() => {
-              setLikeStatus()
-            }}
-          >
             <LikedIcon />
-          </div>
           )
         : (
-          <div
-            className='comment-like-icon' onClick={() => {
-              setLikeStatus()
-            }}
-          >
             <UnLikedIcon />
-          </div>
           )}
+        </div>
     </div>
   )
 }
